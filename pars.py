@@ -1,8 +1,8 @@
-import struct
+from config_settings import config
 
 from _class import Parser
 # Определение формата пакета ЕГТС
-packet_format = "2s B H 4s 4s"
+packet_format = config.packet_format
 
 # Чтение и распаковка данных пакета ЕГТС
 def parse_egts_packet(data):
